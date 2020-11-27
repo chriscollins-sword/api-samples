@@ -1,4 +1,4 @@
-﻿using ApiDemoConsoleApplication.ArmApi;
+﻿using ApiDemoConsoleApplication.ArmService;
 using System;
 using System.Linq;
 
@@ -8,8 +8,7 @@ namespace ApiDemoConsoleApplication
     {
         static void Main(string[] args)
         {
-            var service = PublicServiceProvider.GetService();
-            AuthenticationConfigurer.ConfigureAuthentication(service);
+            var client = PublicClientProvider.GetClient();
 
             RiskTransfer[] risks;
             int totalPages = 0;
@@ -21,15 +20,16 @@ namespace ApiDemoConsoleApplication
             var pageNumber = 1; // first page
             short recordsPerPage = 5000; // 5000 records per page
 
-            var impacts = service.GetImpactsForFilter(itemId, recordTypeId, treeType, filterId, pageNumber, recordsPerPage,out risks, out totalPages);
+            var impacts = client.GetImpactsForFilter(GetArmSoapHeader(), itemId, recordTypeId, treeType, filterId, pageNumber, recordsPerPage, out risks, out totalPages);
 
-            foreach(var impact in impacts)
+            foreach (var impact in impacts)
             {
                 var risk = risks.First(r => r.Id == impact.RiskId);
-                var responses = service.GetResponsesForPlan(impact.PlanId, itemId);
+                
+                var responses = client.GetResponsesForPlan(GetArmSoapHeader(), impact.PlanId, itemId);
 
                 Console.WriteLine($"{impact.Id}: {risk.Name}");
-                foreach(var response in responses)
+                foreach (var response in responses)
                 {
                     Console.WriteLine($"Response: {response.Id} - {response.Name} {response.AchievedScore}");
                 }
@@ -38,5 +38,15 @@ namespace ApiDemoConsoleApplication
             }
             Console.ReadLine();
         }
+
+        static ArmSoapHeader GetArmSoapHeader()
+        {
+            var header = new ArmSoapHeader();
+            header.InstanceID = 1;
+            header.BusinessAreaID = 1;
+            header.ClientVersion = "4.0.2.0";
+            return header;
+        }
     }
 }
+

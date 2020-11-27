@@ -26,20 +26,11 @@ namespace ApiDemoConsoleApplication.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost/arm/Secure/Services/OfflineFormsAuthenticator.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://arm20branch.arm-qa.com/arm/Secure/Services/OfflineFormsAuthenticator.asmx" +
+            "")]
         public string ApiDemoConsoleApplication_FormsAuthenticator_OfflineFormsAuthenticator {
             get {
                 return ((string)(this["ApiDemoConsoleApplication_FormsAuthenticator_OfflineFormsAuthenticator"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/arm/webservices/public/publicservice.asmx")]
-        public string ApiDemoConsoleApplication_ArmApi1_PublicService {
-            get {
-                return ((string)(this["ApiDemoConsoleApplication_ArmApi1_PublicService"]));
             }
         }
     }

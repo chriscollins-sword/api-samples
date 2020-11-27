@@ -1,10 +1,6 @@
 ﻿using ApiDemoConsoleApplication.ArmApi;
 using System;
 using System.Linq;
-using System.Net;
-using System.ServiceModel;
-using System.ServiceModel.Channels;
-using System.Text;
 
 namespace ApiDemoConsoleApplication
 {

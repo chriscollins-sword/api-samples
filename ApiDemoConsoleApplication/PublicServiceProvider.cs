@@ -1,4 +1,5 @@
 ﻿using ApiDemoConsoleApplication.ArmApi;
+using System.IO;
 
 namespace ApiDemoConsoleApplication
 {
@@ -12,7 +13,7 @@ namespace ApiDemoConsoleApplication
             proxy.ArmSoapHeaderValue.BusinessAreaID = ApiSettings.BusinessAreaId;
             proxy.ArmSoapHeaderValue.ClientVersion = ApiSettings.ClientVersion; ;
 
-            proxy.Url = ApiSettings.Url;
+            proxy.Url = Path.Combine(ApiSettings.ServerUrl, "webservices/public/publicservice.asmx");
             return proxy;
         }
     }

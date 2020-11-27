@@ -1,5 +1,4 @@
-﻿
-namespace ApiDemoConsoleApplication
+﻿namespace ApiDemoConsoleApplication
 {
     enum AuthenticationMode
     {

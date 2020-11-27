@@ -35,8 +35,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,687 +47,291 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ArmService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
+    <Compile Include="ApiSettings.cs" />
+    <Compile Include="AuthenticationConfigurer.cs" />
+    <Compile Include="AuthenticationMode.cs" />
+    <Compile Include="PublicServiceProvider.cs" />
     <Compile Include="Credentials.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ArmApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FormsAuthenticator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ActivityDependencyTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ActivityScheduleTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ActivityDependencyTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ActivityTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ActivityScheduleTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddActivityDependencyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ActivityTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddActivityResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\AssessmentTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddActivityScheduleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\AssociationTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddAssociationResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\BlackFlagTypeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddCalendarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\BusinessAreaTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddEscalationItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\CalendarTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddFolderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\CaveatTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddModuleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ClassificationTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ColourTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddRequirementResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ConfigurationSetTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddResourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ControlAssertionTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddResourceToGroupResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ControlClassificationTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddResponseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ControlConditionTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddRiskAndImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ControlInfluenceTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AddRiskLinkageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ControlTypeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AssessmentTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\CurrencyTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.AssociationTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\DesignEffectivenessTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.BlackFlagTypeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\DesignResultTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.BusinessAreaTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\DistributionTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.CalendarTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\EscalationItemTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.CaveatTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\EvaluationTestClassificationTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ClassificationTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\EvaluationTestConditionTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ColourTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\EvaluationTestTypeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ConfigurationSetTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\FieldConfigTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ControlAssertionTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\FilterTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ControlClassificationTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\FolderTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ControlConditionTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\GetRequirementsResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ControlInfluenceTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ImpactCategoryTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ControlTypeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ImpactCategoryTypeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.CurrencyTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ImpactEscalationTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteAssociationResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ImpactGroupTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteEscalationItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ImpactTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\InstanceTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteItemIfEmptyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ItemTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\LanguageSetTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteResourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\MetaDataItemDTO1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteResponseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\ModuleTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DeleteRiskLinkageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\OperatingResultTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DesignEffectivenessTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\PIDPointsTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DesignResultTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\PlanStrategyTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.DistributionTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\PlanTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.EscalateRisksResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\ArmApi\publicservice.wsdl" />
+    <None Include="Web References\ArmApi\RecordTypeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.EscalationItemTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.EvaluationTestClassificationTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.EvaluationTestConditionTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.EvaluationTestTypeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.FieldConfigTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.FilterTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.FolderTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetActivityDependencyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetActivityResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetActivityScheduleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetAllScoreBandsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetArmUrlResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetAssociationsForImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetAssociationsForItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetAvailableWebPartsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetBlackFlagTypesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetBusinessAreasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCalendarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCaveatsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetClassificationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetColourConfigResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetColoursResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetConfigurationSetsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetControlAssertionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetControlClassificationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetControlConditionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetControlInfluenceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetControlTypesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCurrenciesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCustomList1ValuesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCustomList2ValuesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetCustomList3ValuesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetDefaultFilterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetDesignEffectivenessesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetDesignResultResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetDistributionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetEscalationItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetEscalationsForImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetEvaluationTestClassificationResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetEvaluationTestConditionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetEvaluationTestTypeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetFolderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactCategoriesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactCategoryTypesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactGroupsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactsForFilterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetImpactsForItemsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetInstancesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetLanguageSetResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetLanguageSetsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetLicensedFeaturesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetLinkagesForRiskResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetMetaDataHierarchyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetModuleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetOperatingResultResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPIDPointsForFilterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPIDPointsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPlansForFilterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPlanStrategiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetPortalAccessResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRecordTypesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRequirementFieldConfigurationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRequirementFiltersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRequirementResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRequirementsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRequirementsResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourceGroupsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourceRolesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourcesAndGroupsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourcesOfGroupResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResourcesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponseAssessmentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponseEffectivenessesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponsePrioritiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponsesForFilterResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponsesForPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetResponseStatusesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskCategoriesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskLevelsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskPhasesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskSecurityPropertiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskSourcesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetRiskStatusesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetScoreBandsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetScoringSchemeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetScoringSchemesForItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetSecurityAttributesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetStaticDataResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetTestFrequenciesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetTreeItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetUserDataResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetUserFiltersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetUserLanguageSetResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.GetWaterfallDataResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ImpactCategoryTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ImpactCategoryTypeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ImpactEscalationTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ImpactGroupTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ImpactTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.InstanceTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.IsStaticDataCurrentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ItemTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.LanguageSetTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.LinkPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.LinkResponsesToPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.MetaDataItemDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ModuleTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.MoveItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.MoveRiskResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.MoveRisksResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.OperatingResultTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.PIDPointsTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.PlanStrategyTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.PlanTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RecordTypeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RemoveActivityDependencyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RemoveItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RemoveResourceFromAllGroupsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RemoveResourceFromGroupResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RequirementCustomList1Transfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RequirementCustomList2Transfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RequirementCustomList3Transfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RequirementTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResourceGroupTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResourceRoleTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResourceTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResponseEffectivenessTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResponsePriorityTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResponseStatusTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ResponseTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskCategoryTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskLevelTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskLinkageTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskPhaseTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskSourceTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskStatusTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.RiskTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ScoreBandTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.ScoringSchemeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.SecurityAttributeTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.SecurityPropertiesTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.SpecialFeature.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.StaticDataTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.TestFrequencyTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.TreeItemTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UnlinkPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UnlinkResponsesFromPlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateActivityDependencyResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateActivityResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateActivityScheduleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateCalendarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateEscalationItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateFolderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateImpactResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateModuleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdatePlanResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateRequirementResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateResourceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateResponseAssessmentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateResponseResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateRiskResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UpdateRiskSecurityPropertiesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.UserProfileTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.WaterfallDataTransfer.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\ApiDemoConsoleApplication.ArmService.WebPartMetaData.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ArmService\publicservice.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ArmService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ArmService\publicservice.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ArmService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ArmService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ArmService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
+    <None Include="Web References\ArmApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\ArmApi\RequirementCustomList1Transfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RequirementCustomList2Transfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RequirementCustomList3Transfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RequirementTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResourceGroupTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResourceRoleTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResourceTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResponseEffectivenessTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResponsePriorityTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResponseStatusTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ResponseTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskCategoryTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskLevelTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskLinkageTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskPhaseTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskSourceTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskStatusTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\RiskTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ScoreBandTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\ScoringSchemeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\SecurityAttributeTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\SecurityPropertiesTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\SpecialFeature1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\StaticDataTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\TestFrequencyTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\TreeItemTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\UserProfileTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\WaterfallDataTransfer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ArmApi\WebPartMetaData1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\FormsAuthenticator\OfflineFormsAuthenticator.wsdl" />
+    <None Include="Web References\FormsAuthenticator\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/arm/webservices/public/publicservice.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ArmApi\</RelPath>
+      <UpdateFromURL>http://localhost/arm/webservices/public/publicservice.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ApiDemoConsoleApplication_ArmApi1_PublicService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://localhost/arm/Secure/Services/OfflineFormsAuthenticator.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FormsAuthenticator\</RelPath>
+      <UpdateFromURL>https://localhost/arm/Secure/Services/OfflineFormsAuthenticator.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ApiDemoConsoleApplication_FormsAuthenticator_OfflineFormsAuthenticator</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

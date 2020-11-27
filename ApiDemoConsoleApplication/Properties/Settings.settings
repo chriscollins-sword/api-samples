@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ApiDemoConsoleApplication.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApiDemoConsoleApplication_FormsAuthenticator_OfflineFormsAuthenticator" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost/arm/Secure/Services/OfflineFormsAuthenticator.asmx</Value>
+    </Setting>
+    <Setting Name="ApiDemoConsoleApplication_ArmApi1_PublicService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/arm/webservices/public/publicservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

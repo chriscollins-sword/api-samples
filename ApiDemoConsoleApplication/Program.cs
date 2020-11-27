@@ -1,4 +1,4 @@
-﻿using ApiDemoConsoleApplication.ArmService;
+﻿using ApiDemoConsoleApplication.ArmApi;
 using System;
 using System.Linq;
 using System.Net;
@@ -12,46 +12,35 @@ namespace ApiDemoConsoleApplication
     {
         static void Main(string[] args)
         {
-            var service = new PublicServiceSoapClient(GetBinding(), GetEndpointAddress());
+            var service = PublicServiceProvider.GetService();
+            AuthenticationConfigurer.ConfigureAuthentication(service);
 
-            service.ClientCredentials.Windows.ClientCredential = new NetworkCredential(Credentials.UserName, Credentials.Password, Credentials.Domain);
-          
             RiskTransfer[] risks;
             int totalPages = 0;
-            var impacts = service.GetImpactsForFilter(GetArmSoapHeader(), 1, 1, 1, 1, 1, 5000,out risks, out totalPages);
+
+            var itemId = -2; // all items
+            var recordTypeId = 0; // all record types
+            short treeType = 0; // all tree type
+            var filterId = -2; // no filter
+            var pageNumber = 1; // first page
+            short recordsPerPage = 5000; // 5000 records per page
+
+            var impacts = service.GetImpactsForFilter(itemId, recordTypeId, treeType, filterId, pageNumber, recordsPerPage,out risks, out totalPages);
 
             foreach(var impact in impacts)
             {
                 var risk = risks.First(r => r.Id == impact.RiskId);
+                var responses = service.GetResponsesForPlan(impact.PlanId, itemId);
+
                 Console.WriteLine($"{impact.Id}: {risk.Name}");
+                foreach(var response in responses)
+                {
+                    Console.WriteLine($"Response: {response.Id} - {response.Name} {response.AchievedScore}");
+                }
+                Console.WriteLine("------------------------");
+                Console.WriteLine();
             }
             Console.ReadLine();
-        }
-
-        static ArmSoapHeader GetArmSoapHeader()
-        {
-            var header =  new ArmSoapHeader();
-            header.InstanceID = 1;
-            header.BusinessAreaID = 1;
-            header.ClientVersion = "4.0.2.0";
-            return header;
-        }
-        static Binding GetBinding()
-        {
-            var binding = new BasicHttpBinding();
-            binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Ntlm;
-            binding.Security.Transport.ProxyCredentialType = HttpProxyCredentialType.None;
-            binding.Security.Message.ClientCredentialType = BasicHttpMessageCredentialType.UserName;
-            binding.MaxReceivedMessageSize = 6553600;
-            binding.MessageEncoding = WSMessageEncoding.Text;
-            binding.TextEncoding = Encoding.UTF8;
-            binding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;
-            return binding;
-        }
-
-        static EndpointAddress GetEndpointAddress()
-        {
-            return new EndpointAddress("http://localhost/arm/webservices/public/publicservice.asmx");
         }
     }
 }

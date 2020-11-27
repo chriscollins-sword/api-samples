@@ -34,5 +34,14 @@ namespace ApiDemoConsoleApplication
         {
             return new EndpointAddress(Path.Combine(ApiSettings.ServerUrl, "webservices/public/publicservice.asmx"));
         }
+
+        public static ArmSoapHeader GetArmSoapHeader()
+        {
+            var header = new ArmSoapHeader();
+            header.InstanceID = 1;
+            header.BusinessAreaID = 1;
+            header.ClientVersion = "4.0.2.0";
+            return header;
+        }
     }
 }

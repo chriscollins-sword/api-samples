@@ -20,13 +20,22 @@ namespace ApiDemoConsoleApplication
             var pageNumber = 1; // first page
             short recordsPerPage = 5000; // 5000 records per page
 
-            var impacts = client.GetImpactsForFilter(GetArmSoapHeader(), itemId, recordTypeId, treeType, filterId, pageNumber, recordsPerPage, out risks, out totalPages);
+            var impacts = client.GetImpactsForFilter(
+                PublicClientProvider.GetArmSoapHeader(), 
+                itemId, 
+                recordTypeId,
+                treeType,
+                filterId, 
+                pageNumber, 
+                recordsPerPage,
+                out risks,
+                out totalPages);
 
             foreach (var impact in impacts)
             {
                 var risk = risks.First(r => r.Id == impact.RiskId);
                 
-                var responses = client.GetResponsesForPlan(GetArmSoapHeader(), impact.PlanId, itemId);
+                var responses = client.GetResponsesForPlan(PublicClientProvider.GetArmSoapHeader(), impact.PlanId, itemId);
 
                 Console.WriteLine($"{impact.Id}: {risk.Name}");
                 foreach (var response in responses)
@@ -39,14 +48,7 @@ namespace ApiDemoConsoleApplication
             Console.ReadLine();
         }
 
-        static ArmSoapHeader GetArmSoapHeader()
-        {
-            var header = new ArmSoapHeader();
-            header.InstanceID = 1;
-            header.BusinessAreaID = 1;
-            header.ClientVersion = "4.0.2.0";
-            return header;
-        }
+       
     }
 }
 

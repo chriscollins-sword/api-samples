@@ -27,7 +27,8 @@ namespace ApiDemoConsoleApplication.ArmApi {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="PublicServiceSoap", Namespace="http://activerisk.com/")]
-    public partial class PublicService : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    public partial class PublicService : Microsoft.Web.Services3.WebServicesClientProtocol
+    {
         
         private ArmSoapHeader armSoapHeaderValueField;
         

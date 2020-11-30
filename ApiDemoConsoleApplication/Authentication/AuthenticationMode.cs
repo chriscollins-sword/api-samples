@@ -3,7 +3,7 @@
     enum AuthenticationMode
     {
         Ntlm = 1,
-        Forms = 2,
-        Saml = 3
+        Forms = 4,
+        Saml = 5
     }
 }

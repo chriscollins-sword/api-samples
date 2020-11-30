@@ -47,10 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiSettings.cs" />
-    <Compile Include="PublicClientProvider.cs" />
-    <Compile Include="AuthenticationConfigurer.cs" />
-    <Compile Include="AuthenticationMode.cs" />
+    <Compile Include="Examples\UpdateResource.cs" />
+    <Compile Include="Examples\Kpi.cs" />
+    <Compile Include="Examples\DataWarehouse.cs" />
+    <Compile Include="Settings\ApiSettings.cs" />
+    <Compile Include="Client\PublicClientProvider.cs" />
+    <Compile Include="Authentication\AuthenticationConfigurer.cs" />
+    <Compile Include="Authentication\AuthenticationMode.cs" />
     <Compile Include="Connected Services\ArmService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -737,9 +740,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="wse3policy.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
@@ -763,5 +763,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ArmService\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
